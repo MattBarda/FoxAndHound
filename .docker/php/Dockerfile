@@ -1,5 +1,11 @@
 FROM php:7.4-fpm
 
+ENV \
+    PHP_MEMORY_LIMIT=1024M \
+    PHP_UPLOAD_MAX_FILESIZE=32M \
+    PHP_POST_MAX_SIZE=32M \
+    COMPOSER_MEMORY_LIMIT=-1
+
 RUN docker-php-ext-install pdo_mysql
 
 RUN pecl install apcu
@@ -23,7 +29,8 @@ COPY . /usr/src/app
 COPY .env /usr/src/app
 
 RUN set -eux; \
-    composer install --prefer-dist --no-autoloader --no-scripts --no-progress --no-suggest; \
+    composer update; \
+    composer install --prefer-dist --no-autoloader --no-scripts --no-progress; \
     composer clear-cache
 
 RUN set -eux; \

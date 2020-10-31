@@ -7,3 +7,6 @@ change your local DB settings in .env file (see .env.dist)
 
 later
 docker-compose exec php bin/console event-store:projection:run tab_projection
+
+Access application in the browser:
+- http://localhost:18080/tabs/list.json

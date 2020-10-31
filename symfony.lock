@@ -2,6 +2,9 @@
     "beberlei/assert": {
         "version": "v3.2.7"
     },
+    "brick/math": {
+        "version": "0.9.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -77,6 +80,9 @@
     },
     "doctrine/reflection": {
         "version": "v1.1.0"
+    },
+    "doctrine/sql-formatter": {
+        "version": "1.1.1"
     },
     "easycorp/easy-log-handler": {
         "version": "1.0",
@@ -225,6 +231,9 @@
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "ramsey/collection": {
+        "version": "1.1.1"
     },
     "ramsey/uuid": {
         "version": "3.9.2"
@@ -445,11 +454,17 @@
     "symfony/polyfill-intl-idn": {
         "version": "v1.13.1"
     },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "v1.20.0"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.13.1"
     },
     "symfony/polyfill-php73": {
         "version": "v1.13.1"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.20.0"
     },
     "symfony/process": {
         "version": "v5.0.2"
