@@ -12,3 +12,5 @@ prooph_service_bus:
 
 services:
     Prooph\ServiceBus\CommandBus: '@prooph_service_bus.tab_command_bus'
+    Webbaard\Pub\Domain\Tab\Command\OpenTab::class:
+        class: Webbaard\Pub\Domain\Tab\CommandHandler\OpenTabHandler

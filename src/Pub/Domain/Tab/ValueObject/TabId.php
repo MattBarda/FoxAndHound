@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-
 namespace Webbaard\Pub\Domain\Tab\ValueObject;
 
-
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 final class TabId
 {
-    private Uuid $id;
+    private UuidInterface $id;
 
-    private function __construct(Uuid $id)
+    private function __construct(UuidInterface $id)
     {
         $this->id = $id;
     }

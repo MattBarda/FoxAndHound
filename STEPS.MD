@@ -12,7 +12,7 @@ command::open-tab:
 
 1.2. create command
     - extends Command
-    - implements PayloadContructable
+    - implements PayloadConstructable
     - use PayloadTrait
     - public function customerName
     - make const for name
@@ -35,7 +35,7 @@ command::open-tab:
     - create with Tab:forCustomer in invoke
     - save Tab in collection
     
-1.7. add handler to servicebus
+1.7. add handler to service bus
 ```bash
 Webbaard\Pub\Domain\Tab\Command\OpenTab::class:
    Webbaard\Pub\Domain\Tab\CommandHandler\OpenTabHandler

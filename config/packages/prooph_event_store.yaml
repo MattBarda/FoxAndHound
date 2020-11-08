@@ -2,6 +2,11 @@ prooph_event_store:
     stores:
         tab_store:
             event_store: Prooph\EventStore\Pdo\MySqlEventStore
+            repositories:
+                tab_collection:
+                    repository_class: Webbaard\Pub\Infra\Tab\Repository\TabRepository
+                    aggregate_type: Webbaard\Pub\Domain\Tab\Tab
+                    aggregate_translator: prooph_event_sourcing.aggregate_translator
 
 
 
