@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Webbaard\Pub\Application\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;

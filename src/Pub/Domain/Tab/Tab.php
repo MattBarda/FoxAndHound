@@ -19,7 +19,7 @@ final class Tab extends AggregateRoot
 
     private OpenedOn $openedOn;
 
-    public static function forCustomer(CustomerName $customerName)
+    public static function forCustomer(CustomerName $customerName): Tab
     {
         $self = new self();
         $self->tabId = TabId::new();
@@ -56,5 +56,13 @@ final class Tab extends AggregateRoot
         $this->tabId = $event->tabId();
         $this->customerName = $event->customerName();
         $this->openedOn = $event->openedOn();
+    }
+
+    public function payload()
+    {
+        return [
+            'id' => $this->tabId->toString(),
+            'customer' => $this->customerName->toString()
+        ];
     }
 }
